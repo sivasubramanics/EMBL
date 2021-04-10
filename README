@@ -1,0 +1,9 @@
+A perl script to convert tab delimited FPKM table matrix to TPM table matrix
+
+Formula used:
+
+TPM[i] = FPKM[i] / sum(FPKM[j]) * 10^6
+
+Usage: perl FPKM2TPM.pl <input_fpkm.txt> <output_tpm.txt>
+
+Contact: c.s.sivasubramani@gmail.com
