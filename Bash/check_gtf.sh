@@ -9,12 +9,15 @@ function check_feature_type_present(){
     ft=$1
     local first_feature=$(awk '{print $3}' $gtf | grep -m 1 $ft)
     feature_status=$?
+
+########## Fix by Sivasubramani S ###############
     if [ "$first_feature" == '' ]; then
         echo "Something wrong, can't find any $ft features" 1>&2
         exit 1
     else
         return $feature_status
     fi
+#################################################
 }
 
 function count_features(){
